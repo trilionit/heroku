@@ -2,7 +2,7 @@ var express =require("express");
 var app = express();
 var port = 3000;
 var bodyParser = require("body-parser");
-var Sequelize = require("Sequelize");
+var Sequelize = require("sequelize");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
