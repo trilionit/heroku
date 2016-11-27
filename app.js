@@ -1,11 +1,12 @@
 var express =require("express");
 var app = express();
-var port = 3000;
+//var port = 3000;
 // var bodyParser = require("body-parser");
 // var Sequelize = require("sequelize");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.set('port', (process.env.PORT || 3000));
 
 // var sequelize = new Sequelize('myblog', 'root', null, {
 //   host: 'localhost',
@@ -68,6 +69,6 @@ res.render('index');
 //   res.redirect('/posts');
 // });
 
-app.listen(port, function(){
+app.listen(app.get('port'), function(){
 console.log('Server Started');
 });
